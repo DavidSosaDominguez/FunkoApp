@@ -1,0 +1,18 @@
+.sigmar-one-regular {
+        font-family: "Sigmar One", serif;
+        font-weight: 400;
+        font-style: normal;
+        color: aliceblue;
+        background-color: aqua;
+        font-size: 543%;
+      }
+
+.logo {
+        float: left;
+        width: 10%;
+        height: 20%;
+      }
+
+body {
+    background-color: blue;
+}
