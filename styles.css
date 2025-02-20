@@ -3,16 +3,79 @@
         font-weight: 400;
         font-style: normal;
         color: aliceblue;
-        background-color: aqua;
-        font-size: 543%;
+        font-size: 300%;
+        float: left;
+        position: relative;
+        top: -2px;
+      }
+.search-container {
+        position: relative;
+        padding: 5px;
+        width: 400px;
+        float: left;
+        margin-left: 50px;
+        margin-right: 50px;
+        top: 55px;
+      }
+    
+.search-container input {
+        border: none;
+        outline: none;
+        padding: 5px;
+        border-radius: 20px;
+        width: 400px;
+      }
+    
+.search-container button {
+        float: left;
+        background: FFFFFF;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        position: relative;
+        top: -28px;
+        left: 390px;
+        width: 40px;
       }
 
 .logo {
         float: left;
         width: 10%;
         height: 20%;
+        position: relative;
+        top: -13px;
+        right: 30px;
       }
+header {
+    background-color: 85C6FF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 
-body {
-    background-color: blue;
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#button {
+    position: relative;
+    top: 50px;
+    margin-left: 10;
+    left: 180;
+    width: 110px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 10px 30px;
+}
+.log_in {
+    background-color: FF3B7D;
+    color: FFFFFF;
+    
+}
+.sign_in {
+    background-color: FFFFFF;
+    color: FF3B7D;
+    margin-right: 10;
 }
