@@ -1,13 +1,15 @@
 .sigmar-one-regular {
-        font-family: "Sigmar One", serif;
+        font-family: "Sigmar One";
         font-weight: 400;
         font-style: normal;
         color: aliceblue;
         font-size: 300%;
-        float: left;
-        position: relative;
-        top: -2px;
       }
+#title {
+  float: left;
+  position: relative;
+  top: -2px;
+}
 .search-container {
         position: relative;
         padding: 5px;
