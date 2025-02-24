@@ -1,5 +1,5 @@
 .sigmar-one-regular {
-        font-family: "Sigmar One";
+    font-family: "Sigmar One", serif;
         font-weight: 400;
         font-style: normal;
         color: aliceblue;
@@ -30,7 +30,7 @@
     
 .search-container button {
         float: left;
-        background: FFFFFF;
+        background: #FFFFFF;
         border: none;
         border-radius: 10px;
         cursor: pointer;
@@ -49,7 +49,7 @@
         right: 30px;
       }
 header {
-    background-color: 85C6FF;
+    background-color: #85C6FF;
     position: fixed;
     top: 0;
     left: 0;
@@ -64,8 +64,8 @@ header {
 #button {
     position: relative;
     top: 50px;
-    margin-left: 10;
-    left: 180;
+    margin-left: 10px;
+    left: 180px;
     width: 110px;
     height: 40px;
     border-radius: 30px;
@@ -76,13 +76,13 @@ header {
     font-size: 70%;
 }
 .log_in {
-    background-color: FF3B7D;
-    color: FFFFFF;    
+    background-color: #FF3B7D;
+    color: #FFFFFF;
 }
 .sign_in {
-    background-color: FFFFFF;
-    color: FF3B7D;
-    margin-right: 10;
+    background-color: #FFFFFF;
+    color: #FF3B7D;
+    margin-right: 10px;
 }
 .body {
   display: flex;
