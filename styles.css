@@ -68,11 +68,14 @@ header {
     height: 40px;
     border-radius: 30px;
     padding: 10px 30px;
+    font-family: "Sigmar One", serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 70%;
 }
 .log_in {
     background-color: FF3B7D;
-    color: FFFFFF;
-    
+    color: FFFFFF;    
 }
 .sign_in {
     background-color: FFFFFF;
@@ -85,7 +88,8 @@ header {
   align-items: center;
   height: 100vh;
   background-color: #D4EFFF;
-  font-family: Arial, sans-serif;
+  font-family: "Sigmar One", serif;
+  font-size: 70%;
 }
 .gallery {
   display: grid;
