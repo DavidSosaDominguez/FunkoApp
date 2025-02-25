@@ -9,16 +9,24 @@
 
     <main>
         <header>
-            <figure>
-                <img src="images/logo.png" alt="logo de la empresa" class="logo">
-            </figure>
-            <h1 class="sigmar-one-regular" id="title"> Funko Store</h1>
-            <input type="search" placeholder="Buscar...">
-            <button class="search-button">
-                <img src="images/search.png" alt="buscar" class="search-icon">
-            </button>
-            <button class="button" id="sign_up">Sign up</button>
-            <button class="button" id="sign_in">Sign in</button>
+            <ul class="logo-title-list">
+                <li><figure>
+                    <img src="images/logo.png" alt="logo de la empresa" class="logo">
+                </figure></li>
+                <li><h1 class="sigmar-one-regular" id="title"> Funko Store</h1></li>
+            </ul>
+            <form class="search-container">
+                <label>
+                    <input type="search" placeholder="Buscar...">
+                </label>
+                <button type="submit" class="search-button">
+                    <img src="images/search.png" alt="buscar" class="search-icon">
+                </button>
+            </form>
+            <ul class="button-list">
+                <li><button class="button" id="sign_up">Sign up</button></li>
+                <li><button class="button" id="sign_in">Sign in</button></li>
+            </ul>
         </header>
     </main>
 </html>
