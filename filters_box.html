@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilterBox</title>
+    <link rel="stylesheet" href="filters_box.css">
+</head>
+<body>
+<form class="filter-box">
+    <fieldset>
+        <legend>Size</legend>
+        <label><input type="checkbox" name="size" value="mega" checked> Mega</label>
+        <label><input type="checkbox" name="size" value="jumbo" checked> Jumbo</label>
+        <label><input type="checkbox" name="size" value="super" checked> Super</label>
+        <label><input type="checkbox" name="size" value="regular" checked> Regular</label>
+    </fieldset>
+    <fieldset class="price-range">
+        <legend>Price Range</legend>
+        <div class="range-container">
+            <label for="price" class="min-price">0 €</label>
+            <input type="range" id="price" name="price" min="0" max="100" value="10" oninput="updatePriceValue(this.value)">
+            <label for="price" class="max-price">100 €</label>
+        </div>
+        <span id="price-value">10 €</span>
+    </fieldset>
+</form>
+
+<script>
+    function updatePriceValue(value) {
+        document.getElementById('price-value').innerText = value + ' €';
+    }
+</script>
+</body>
+</html>
