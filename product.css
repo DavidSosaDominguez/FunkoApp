@@ -12,7 +12,7 @@ main {
     margin-top: 10rem;
     margin-left: 20rem;
     margin-right: 20rem;
-    padding: 20px;
+    padding: 1.5rem;
     display: flex;
     align-content: center;
     grid-template-columns: 1fr 1fr;
@@ -81,9 +81,10 @@ aside {
     max-width: 800px;
     margin-left: 20rem;
     margin-right: 20rem;
+    margin-bottom: 20rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column; /* Organiza el contenido en columna */
-    padding: 20px;
     border: 2px solid #000;
 }
 
