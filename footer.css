@@ -1,0 +1,36 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garantiza que el contenido ocupe al menos el alto de la pantalla */
+    background-color: #D4EFFF;
+    font-family: "Sigmar One", serif;
+    font-size: 70%;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: #85C6FF;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    position: relative; /* Se cambia de fixed a relative para evitar problemas */
+    box-sizing: border-box;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 48px);
+    grid-template-rows: repeat(2, 48px);
+    gap: 5px;
+}
+
+.gallery img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    margin-top: 10px;
+}

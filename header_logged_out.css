@@ -88,39 +88,11 @@ header {
 }
 
 .body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #D4EFFF;
-  font-family: "Sigmar One", serif;
-  font-size: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #D4EFFF;
+    font-family: "Sigmar One", serif;
+    font-size: 70%;
 }
-/*
-.footer {
-  display: flex;
-  height: 100px;
-  background-color: #85C6FF;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 48px);
-    grid-template-rows: repeat(2, 48px);
-    gap: 5px;
-
-}
-.gallery img {
-    width: 48px;
-    height: 48px;
-    object-fit: cover;
-    margin-top: 10px;
-}
-*/

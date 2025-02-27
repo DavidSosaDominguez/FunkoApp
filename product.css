@@ -1,0 +1,111 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d6eaf8;
+    margin: 0;
+    padding: 20px;
+}
+
+main {
+    background-color: #fef8e6;
+    max-width: 800px;
+    margin-top: 10rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    padding: 20px;
+    display: flex;
+    align-content: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    border: 2px solid #000;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000;
+    width: 75%;
+    height: 90%;
+    background-color: #fff;
+}
+
+img {
+    width: 50%;
+    height: auto;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+p {
+    font-size: 14px;
+    color: #333;
+}
+
+.category {
+    color: gray;
+    font-size: 12px;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    font-family: "Sigmar One", serif;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+h2 {
+    font-style: italic;
+    color: #d6336c;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+aside {
+    background-color: #fef8e6;
+    max-width: 800px;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columna */
+    padding: 20px;
+    border: 2px solid #000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en caso de falta de espacio */
+    gap: 10px; /* Agrega un pequeño espacio entre elementos */
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido */
+    flex: 1; /* Hace que cada sección ocupe el mismo espacio */
+    min-width: 100px; /* Ajusta el tamaño mínimo de cada sección */
+    text-align: center;
+}
+
+
+section figure {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+}
