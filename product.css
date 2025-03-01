@@ -27,7 +27,7 @@ main {
 }
 
 main {
-    margin: 0;
+    margin-top: 20px;
     padding:0;
 }
 
@@ -118,7 +118,7 @@ aside {
     border: 2px solid #000;
 }
 
-h2 {
+#related_products_text {
     font-style: italic;
     color: #d6336c;
     font-size: 2em;

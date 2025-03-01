@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+main {
+    padding: 60px;
+}
+
 #register_box {
     display: flex;
     flex-direction: column;
@@ -37,4 +41,19 @@
     font-size: 1em;
     /*font-weight: bold;*/
     border-radius: 5px;
+}
+
+#register_link {
+    width: 200px;
+    margin: 20px auto;
+}
+
+#signup_link {
+    background-color: white;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    color: blue;
+    font-size: 0.7em;
+    padding: 3px;
 }
