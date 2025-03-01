@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+main {
+    padding: 60px;
+}
+
 #register_box {
     display: flex;
     flex-direction: column;
