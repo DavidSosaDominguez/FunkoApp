@@ -5,6 +5,11 @@
 
 body {
     background-color: #D4EFFF;
+    padding: 0;
+}
+
+main {
+    padding: 40px;
 }
 
 
