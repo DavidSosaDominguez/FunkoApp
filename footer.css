@@ -1,60 +1,28 @@
-/* Footer */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
 footer {
     background-color: #85C6FF;
     color: white;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    box-sizing: border-box;
-    padding: 5px 0; /* Reduce el espacio interno superior e inferior */
-    height: auto; /* Se ajusta al contenido */
-    min-height: 80px; /* Ajusta la altura mínima */
-}
-
-/* Lista dentro del footer */
-.footer-list {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
     align-items: center;
-    list-style-type: none;
-    margin: 0;
-    padding: 5px 10px; /* Reduce el padding general */
+    height: 150px;
 }
 
-/* Secciones de contacto y sobre nosotros */
-.contacts, .about-us {
-    padding: 0 10px;
-    margin: 0; /* Evita espacios extra */
+.info h2 {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: "Sigmar One", Serif, sans-serif;
 }
 
-.contacts h2, .about-us h2 {
-    font-size: 1.2em;
-    margin-bottom: 5px; /* Reduce el margen inferior */
-}
-
-.contacts p, .about-us p {
+.info p {
     font-size: 0.9em;
-    line-height: 1.4;
-    margin: 0; /* Elimina márgenes extra */
-}
-
-/* Ajuste para el contenido principal */
-main {
-    flex: 1;
-    padding-bottom: 110px; /* Reduce el espacio que deja para el footer */
-}
-
-/* Ajustes generales */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #D4EFFF;
-    font-family: "Sigmar One", serif;
-    font-size: 80%;
 }
 
 /* Galería */
@@ -69,5 +37,5 @@ body {
     width: 48px;
     height: 48px;
     object-fit: cover;
-    margin-top: 10px;
+    /*margin-top: 10px;*/
 }
