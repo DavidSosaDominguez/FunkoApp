@@ -1,20 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+}
+
 header {
     background-color: #85C6FF;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
 }
 
 .logo-title-list {
     display: flex;
     align-items: center;
-    list-style-type: none;
-    padding: 0;
+    /*padding: 0;*/
     gap: 20px;
 }
 

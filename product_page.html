@@ -2,42 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="product.css">
   <link rel="stylesheet" href="styles.css">
-
+  <link rel="stylesheet" href="product.css">
   <title>Página de producto</title>
 </head>
-<body>
 
-<main>
+<body>
   <header>
-    <iframe src="header_logged_out.html" width="100%" style="border:none"></iframe>
+   <iframe src="header_logged_out.html" width="100%" style="border:none"></iframe>
   </header>
-  <figure>
-    <img src="images/image-icon.png" alt="Producto">
-  </figure>
-  <article>
-    <h1>Random Product</h1>
-    <span class="category">Category</span>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies rutrum velit non iaculis.</p>
-    <button>Añadir al carrito</button>
-  </article>
-  <footer class="footer">
+  <main>
+    <article id="product_display">
+      <section class="product_sections">
+        <figure id="product_image_container">
+          <img id="product_image" src="images/image-icon.png" alt="Producto">
+        </figure>
+      </section>
+
+      <section id="product_info" class="product_sections">
+        <section id="product_def_container">
+          <h1 id="product_title">Random Product</h1>
+          <h2 id="category_text">Category</h2>
+        </section>
+        <p id="product_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies rutrum velit non iaculis.</p>
+        <button id="buy_button">Añadir al carrito</button>
+      </section>
+    </article>
+  </main>
+
+  <aside>
+    <h2>Podría interesarte...</h2>
+    <nav>
+      <section class="related_product_item"><figure ><img class="related_images" src="images/image-icon.png" alt="Producto"></figure><span>Random Product</span></section>
+      <section class="related_product_item"><figure ><img class="related_images" src="images/image-icon.png" alt="Producto"></figure><span>Random Product</span></section>
+      <section class="related_product_item"><figure ><img class="related_images" src="images/image-icon.png" alt="Producto"></figure><span>Random Product</span></section>
+      <section class="related_product_item"><figure ><img class="related_images" src="images/image-icon.png" alt="Producto"></figure><span>Random Product</span></section>
+      <section class="related_product_item"><figure ><img class="related_images" src="images/image-icon.png" alt="Producto"></figure><span>Random Product</span></section>
+    </nav>
+  </aside>
+
+  <footer>
     <iframe src="footer.html" width="100%" style="border:none"></iframe>
   </footer>
-</main>
-
-<aside>
-  <h2>Podría interesarte...</h2>
-  <nav>
-    <section><figure><img src="images/image-icon.png" alt="Producto"></figure><span>Random Product</span></section>
-    <section><figure><img src="images/image-icon.png" alt="Producto"></figure><span>Random Product</span></section>
-    <section><figure><img src="images/image-icon.png" alt="Producto"></figure><span>Random Product</span></section>
-    <section><figure><img src="images/image-icon.png" alt="Producto"></figure><span>Random Product</span></section>
-    <section><figure><img src="images/image-icon.png" alt="Producto"></figure><span>Random Product</span></section>
-  </nav>
-</aside>
 </body>
 </html>
