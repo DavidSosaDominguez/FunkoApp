@@ -6,23 +6,6 @@ Miguel Castellano Hernández,
 Daniel Sosa Domínguez y
 David Sosa Domínguez
 ## Requisitos Web FunkoStore
-### Requisitos funcionales
-- El sistema llevará al usuario a la página de inicio de sesión en el caso de que este intente reservar un producto sin estar identificado.
-
-- El sistema permitirá al usuario reservar las figuras que quiera de una misma vez.
-
-- Los usuarios deberán ingresar al sistema con un nombre, una contraseña, y una dirección de correo electrónico para que pueda ser contactado al realizar el seguimiento de su producto.
-
-- La base de datos será implementada mediante un archivo Json.
-
-- El campo nombre solo acepta caracteres alfabéticos.
-
-- El campo contraseña acepta caracteres alfabéticos, numéricos y especiales.
-
-- El campo dirección acepta caracteres alfabéticos y numéricos.
-
-- El sistema mostrará el número de ejemplares de un producto que haya en stock. Este número cambiará cuando cualquier usuario compre o venda alguna figura.
-
 ### Requisitos no funcionales
 
 - El sistema debe ser fácil de utilizar e intuitivo para nuevos usuarios.
@@ -36,6 +19,24 @@ David Sosa Domínguez
 - El contenido disponible de la tienda deberá poder actualizarse o modificarse fácilmente.
 
 - El sistema no compartirá datos personales de un usuario con el resto.
+
+### Requisitos funcionales
+- El sistema llevará al usuario a la página de inicio de sesión en el caso de que este intente comprar un producto sin estar identificado.
+
+- El sistema permitirá al usuario comprar varias figuras de una misma vez.
+
+- Los usuarios deberán ingresar al sistema con un nombre, una contraseña, y una dirección de correo electrónico para que puedan ser contactados al realizar el seguimiento de su pedido.
+
+- La base de datos será implementada mediante un archivo Json.
+
+- El campo nombre solo acepta caracteres alfabéticos.
+
+- El campo contraseña acepta caracteres alfabéticos, numéricos y especiales.
+
+- El campo dirección acepta caracteres alfabéticos y numéricos.
+
+- El sistema mostrará el número de ejemplares de un producto que haya en stock. Este número cambiará cuando cualquier usuario compre o venda alguna figura.
+
 
 ## Mockups y Storyboards
 
