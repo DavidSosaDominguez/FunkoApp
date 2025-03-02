@@ -2,15 +2,15 @@
 ## Integrantes
 Grupo 41.4 compuesto por:
 
-Miguel Castellano Hernández,
-Daniel Sosa Domínguez y
-David Sosa Domínguez
+Miguel Castellano Hernández (miguelink113),
+Daniel Sosa Domínguez (User, DaniSosa) y
+David Sosa Domínguez (RReDDpy, DavidSosaDomínguez)
 ## Requisitos Web FunkoStore
 ### Requisitos no funcionales
 
 - El sistema debe ser fácil de utilizar e intuitivo para nuevos usuarios.
 
-- El sistema debe responder al usuario en todo momento en menos de 10 segundos.
+- El sistema debe responder al usuario en todo momento en menos de 2 segundos.
 
 - La página web tendrá un tipo de diseño “responsive” para garantizar su buen uso y visualización tanto en PC como en móviles.
 
@@ -22,8 +22,6 @@ David Sosa Domínguez
 
 ### Requisitos funcionales
 - El sistema llevará al usuario a la página de inicio de sesión en el caso de que este intente comprar un producto sin estar identificado.
-
-- El sistema permitirá al usuario comprar varias figuras de una misma vez.
 
 - Los usuarios deberán ingresar al sistema con un nombre, una contraseña, y una dirección de correo electrónico para que puedan ser contactados al realizar el seguimiento de su pedido.
 
@@ -41,7 +39,22 @@ David Sosa Domínguez
 ## Mockups y Storyboard
 Los mockups y el storyboard en "mockups_and_storyboard.pdf", localizado en la carpeta "mockups". Allí, también se pueden ver las imágenes de manera individual en la subcarpeta "individual_mockups".
 
-## Listado de páginas html
-Página de inicio web: listado de productos sin filtrar?
+## Listado de páginas html y los mockups que representan
+Página de inicio web: index.html --> search page content logged out.png
+                      log_in_page.html --> log in page.png
+                      log_main_page.html --> search page content logged in.png
+                      log_product_page.html --> product logged in.png
+                      no_log_product_page.html --> product logged out.png
+                      sign_up_page.html --> register page.png
 
-## Enlaces de Figma y Teleport
+## Listado de archivos templates
+- footer_template.html --> footer.png --> se carga en todas las páginas html mencionadas anteriormente
+- log_header_template.html --> header_logged_in.png --> se carga en: log_main_page.html, log_product_page.html
+- log_product_main_template.html --> various_products.png --> se carga en: log_product_page.html
+- no_log_header_template.html --> header_logged_out.png --> se carga en: index.html, log_in_page.html, no_log_product_page.html, sign_up_page.html
+- no_log_product_main_template.html --> various_products.png --> se carga en: no_log_product_page.html
+- product_aside_template.html --> related_products_section.png --> se carga en: log_product_page.html, no_log_product_page.html
+
+## Enlaces de Figma y Trello
+Enlace a Figma: https://www.figma.com/proto/Y5RfUjnKBVKyW7YP7aJ0Od/FunkoStore?node-id=0-1&t=oSm50ukrvczhm2Jw-1
+Enlace a Trello: https://trello.com/invite/b/67a251c975e168960811fcb6/ATTI2ffbfd1ea74fb8f90c93274d136c8c3664EC95DE/funkoweb
