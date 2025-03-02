@@ -38,7 +38,8 @@ David Sosa Domínguez
 - El sistema mostrará el número de ejemplares de un producto que haya en stock. Este número cambiará cuando cualquier usuario compre o venda alguna figura.
 
 
-## Mockups y Storyboards
+## Mockups y Storyboard
+Los mockups y el storyboard en "mockups_and_storyboard.pdf", localizado en la carpeta "mockups". Allí, también se pueden ver las imágenes de manera individual en la subcarpeta "individual_mockups".
 
 ## Listado de páginas html
 Página de inicio web: listado de productos sin filtrar?
