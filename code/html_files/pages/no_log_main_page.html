@@ -3,17 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <title>Main Page</title>
-        <link rel="stylesheet" type="text/css" href="../../stylesheets/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="../../stylesheets/styles.css">
+        <link rel="stylesheet" href="../../stylesheets/footer.css">
+        <link rel="stylesheet" href="../../stylesheets/header_logged_out.css">
+
+        <script src="../../scripts/xlu-include-file.js"></script>
     </head>
 
     <body>
-        <header>
-            <iframe src="../templates/no_log_header_template.html" width="100%" style="border:none"></iframe>
-        </header>
+        <header xlu-include-file="../templates/no_log_header_template.html"></header>
         <main></main>
-
-        <footer>
-            <iframe src="../templates/footer_template.html" width="100%" style="border:none"></iframe>
-        </footer>
+        <footer xlu-include-file="../templates/footer_template.html"></footer>
+        <script>xLuIncludeFile()</script>
     </body>
 </html>
