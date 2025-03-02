@@ -12,9 +12,6 @@
     align-items: center;
     gap: 10px;
     padding: 20px;
-    border: 2px solid black;
-    border-radius: 15px;
-    /*background-color: grey;*/
 }
 
 .product_holder {
@@ -27,6 +24,7 @@
     background-color: white;
     font-family: serif;
     border: 1px solid black;
+    border-radius: 15px;
 }
 
 .product_info {
@@ -41,22 +39,31 @@
     width: 100px;
 }
 
+.product_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .product_button {
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-align: center;
-    background-color: lightgrey;
+    background-color:  #FF3B7D;
     border-radius: 20px;
-    color: black;
+    color: white;
+    width: 60%;
+    margin-top: 10px;
 }
 
 .product_name {
     font-size: 1.5rem;
     text-align: left;
+    color: #191970;
 }
 
 .product_description {
-    font-size: 0.6rem;
+    font-size: 0.75rem;
     text-align: left;
     color: grey;
 }
