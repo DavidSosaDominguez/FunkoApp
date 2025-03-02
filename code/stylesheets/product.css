@@ -97,11 +97,13 @@ main {
     font-family: serif;
     font-size: 1.3rem;
     cursor: pointer;
-    background-color: #4a90e2;
+    background-color: #191970;
     color: white;
     border: none;
     padding: 10px;
     margin-bottom: 40px;
+    text-decoration: none;
+    text-align: center;
 }
 
 aside {
