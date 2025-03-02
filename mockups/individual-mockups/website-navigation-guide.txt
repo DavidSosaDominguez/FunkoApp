@@ -1,0 +1,3 @@
+Guide to understanding "website-navigation.png"
+Rectangles represent the relationship between their closest button and the pop-up they trigger.
+Circles represent the relationship between their closest button and the web page they redirect to.

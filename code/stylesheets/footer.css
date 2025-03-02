@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+footer {
+    background-color: #85C6FF;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    align-items: center;
+    height: 140px;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+.info h2 {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: "Sigmar One", Serif, sans-serif;
+}
+
+.info p {
+    font-size: 0.9em;
+}
+
+/* Galería */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 48px);
+    grid-template-rows: repeat(2, 48px);
+    gap: 5px;
+}
+
+.gallery img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    /*margin-top: 10px;*/
+}
