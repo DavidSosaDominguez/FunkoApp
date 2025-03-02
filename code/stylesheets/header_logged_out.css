@@ -22,11 +22,15 @@ header {
     width: 8rem;
     height: 8rem;
 }
-
 #title {
     font-size: 4rem;
-    color: #FFFFFF;
     margin: 0 10px;
+}
+
+
+#title a {
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 .search-container {
