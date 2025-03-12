@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Ahri",
+    "description": "Nueve colas",
+    "price": "99,9",
+    "image": "https://percalandia.com/22022-home_default/funko-pop-league-of-legends-ahri.jpg",
+    "link": "no_log_product_page.html"
+  },
+  {
+    "id": 2,
+    "name": "Viego",
+    "description": "Rey arruinado",
+    "price": "79,5",
+    "image": "https://www.frikibunker.es/productos/imagenes/img_33020_52bf9bf60e637d49bafea7331bb3289c_20.jpg",
+    "link": "no_log_product_page.html"
+  },
+  {
+    "id": 3,
+    "name": "Arkane Viktor",
+    "description": "Científico loco autómata",
+    "price": "59,0",
+    "image": "https://pidopop.com/926797-large_default/figura-pop-league-of-legends-pop-arcane-champion-viktor.jpg",
+    "link": "no_log_product_page.html"
+  }
+]

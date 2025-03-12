@@ -53,8 +53,10 @@ main {
     height: 100%;
 }
 
+
 #product_image {
-    width: 50%;
+    height: 8vh;
+    width: auto;
 }
 
 #product_info {
