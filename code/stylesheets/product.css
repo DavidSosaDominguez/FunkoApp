@@ -55,8 +55,8 @@ main {
 
 
 #product_image {
-    height: 8vh;
-    width: auto;
+    width: 150px;
+    height: auto;
 }
 
 #product_info {

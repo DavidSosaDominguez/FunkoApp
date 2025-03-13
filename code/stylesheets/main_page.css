@@ -36,7 +36,8 @@
 }
 
 .product_image {
-    width: 100px;
+    width: 150px;
+    height: auto;
 }
 
 .product_details {
@@ -52,7 +53,7 @@
     background-color:  #FF3B7D;
     border-radius: 20px;
     color: white;
-    width: 60%;
+    width: 6vw;
     margin-top: 10px;
 }
 
