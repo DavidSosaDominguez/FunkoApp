@@ -61,7 +61,7 @@
                 // Mostrar los detalles del producto
                 document.getElementById('product_image').src = product.image;
                 document.getElementById('product_title').textContent = product.name;
-                document.getElementById('category_text').textContent = product.category || 'Categoría desconocida';
+                document.getElementById('category_text').textContent = product.series || 'Categoría desconocida';
                 document.getElementById('product_description').textContent = product.description;
                 document.getElementById('buy_button').addEventListener('click', () => {
                     alert('Producto añadido al carrito');

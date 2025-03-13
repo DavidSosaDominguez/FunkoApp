@@ -14,7 +14,7 @@ fetch('../../json_files/example.json')
                     <img class="product_image" src="${product.image}" alt="${product.name}"/>
                     <section class="product_details">
                         <h2 class="product_name">${product.name}</h2>
-                        <h3 class="product_description">${product.description}</h3>
+                        <h3 class="product_description">${product.series}</h3>
                         <!-- Añadido el id del producto en el enlace -->
                         <a href="no_log_product_page.html?id=${product.id}" class="product_button">View</a>
                     </section>

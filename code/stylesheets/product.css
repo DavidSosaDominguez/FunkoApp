@@ -87,7 +87,7 @@ main {
 #product_description {
     width: 70%;
     text-align: justify;
-    font-size: 1.3em;
+    font-size: 1em;
     color: #333;
     margin-bottom: 20px;
 }
