@@ -1,26 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Product Page</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Product Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../../stylesheets/styles.css">
-  <link rel="stylesheet" href="../../stylesheets/header_logged_out.css">
-  <link rel="stylesheet" href="../../stylesheets/footer.css"/>
-  <link rel="stylesheet" href="../../stylesheets/no_log_product.css">
+    <link rel="stylesheet" href="../../stylesheets/styles.css">
+    <link rel="stylesheet" href="../../stylesheets/header_logged_out.css">
+    <link rel="stylesheet" href="../../stylesheets/footer.css"/>
+    <link rel="stylesheet" href="../../stylesheets/no_log_product.css">
 
-  <script src="../../scripts/xlu-include-file.js"></script>
+    <script src="../../scripts/xlu-include-file.js"></script>
 </head>
 
 <body>
-   <header xlu-include-file="../templates/no_log_header_template.html"></header>
-   <main xlu-include-file="../templates/no_log_product_main_template.html"></main>
-   <aside xlu-include-file="../templates/product_aside_template.html"></aside>
-   <footer xlu-include-file="../templates/footer_template.html"></footer>
+<header xlu-include-file="../templates/no_log_header_template.html"></header>
+<main>
+    <!-- Aquí es donde se mostrarán los detalles del producto -->
+    <article id="product_display">
+        <section class="product_sections">
+            <figure id="product_image_container">
+                <!-- Imagen del producto -->
+                <img id="product_image" alt="Producto" src="https://m.media-amazon.com/images/I/41Uzkq8Z-PL._AC_SY879_.jpg"/>
+            </figure>
+        </section>
 
-   <script>xLuIncludeFile()</script>
+        <section id="product_info" class="product_sections">
+            <section id="product_def_container">
+                <!-- Título del producto -->
+                <h1 id="product_title">Producto</h1>
+                <!-- Categoría del producto -->
+                <h2 id="category_text">Categoría</h2>
+            </section>
+            <!-- Descripción del producto -->
+            <p id="product_description">Descripción del producto...</p>
+            <!-- Botón para añadir al carrito -->
+            <button type="button" id="buy_button">Añadir al carrito</button>
+        </section>
+    </article>
+
+</main>
+<aside xlu-include-file="../templates/product_aside_template.html"></aside>
+<footer xlu-include-file="../templates/footer_template.html"></footer>
+
+<script>
+    // Obtener el ID del producto desde los parámetros de la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+
+    // Cargar los datos de los productos
+    fetch('../../json_files/example.json')
+        .then(response => response.json())
+        .then(products => {
+            // Buscar el producto específico usando el ID
+            const product = products.find(p => p.id == productId);
+
+            if (product) {
+                // Mostrar los detalles del producto
+                document.getElementById('product_image').src = product.image;
+                document.getElementById('product_title').textContent = product.name;
+                document.getElementById('category_text').textContent = product.series || 'Categoría desconocida';
+                document.getElementById('product_description').textContent = product.description;
+                document.getElementById('buy_button').addEventListener('click', () => {
+                    alert('Producto añadido al carrito');
+                });
+            } else {
+                console.error('Producto no encontrado');
+            }
+        })
+        .catch(error => console.error('Error loading product:', error));
+</script>
+
+<script>xLuIncludeFile()</script>
 </body>
 </html>

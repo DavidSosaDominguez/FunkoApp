@@ -53,8 +53,10 @@ main {
     height: 100%;
 }
 
+
 #product_image {
-    width: 50%;
+    width: 150px;
+    height: auto;
 }
 
 #product_info {
@@ -85,7 +87,7 @@ main {
 #product_description {
     width: 70%;
     text-align: justify;
-    font-size: 1.3em;
+    font-size: 1em;
     color: #333;
     margin-bottom: 20px;
 }

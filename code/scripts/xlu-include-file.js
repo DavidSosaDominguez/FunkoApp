@@ -1,87 +1,44 @@
-// https://stackoverflow.com/questions/40162907/w3includehtml-sometimes-includes-twice
-/*
-function xLuIncludeFile() {
-    let z, i, a, file, xhttp;
-
-    z = document.getElementsByTagName("*");
-
-    for (i = 0; i < z.length; i++) {
-        if (z[i].getAttribute("xlu-include-file")) {
-            a = z[i].cloneNode(false);
-            file = z[i].getAttribute("xlu-include-file");
-            xhttp = new XMLHttpRequest();
-
-            xhttp.onreadystatechange = function () {
-                if (xhttp.readyState === 4 && xhttp.status === 200) {
-                    a.removeAttribute("xlu-include-file");
-                    a.innerHTML = xhttp.responseText;
-                    z[i].parentNode.replaceChild(a, z[i]);
-                    xLuIncludeFile();
-                }
-            }
-
-            // false makes the send operation synchronous, which solves a problem
-            // when using this function in short pages with Chrome. But it is
-            // deprecated on the main thread due to its impact on responsiveness.
-            // This call may end up throwing an exception someday.
-
-            xhttp.open("GET", file, false);
-            xhttp.send();
-
-            return;
-        }
-    }
-}
-*/
-
 async function xLuIncludeFile() {
-    let z = document.getElementsByTagName("*");
+    let elements = document.querySelectorAll("[xlu-include-file]");
 
-    for (let i = 0; i < z.length; i++) {
-        if (z[i].getAttribute("xlu-include-file")) {
-            let a = z[i].cloneNode(false);
-            let file = z[i].getAttribute("xlu-include-file");
+    // Mapeamos todas las promesas de carga
+    let fetchPromises = Array.from(elements).map(async (el) => {
+        let file = el.getAttribute("xlu-include-file");
+        let clonedElement = el.cloneNode(false);
 
-            try {
-                let response = await fetch(file);
-                if (response.ok) {
+        try {
+            let response = await fetch(file);
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+            let content = await response.text();
 
-                    let content = await response.text();
+            if (file === "article-template.html") {
+                let articleData = {
+                    title: el.getAttribute("data-title"),
+                    subtitle: el.getAttribute("data-subtitle"),
+                    date: el.getAttribute("data-date"),
+                    displayDate: el.getAttribute("data-display-date"),
+                    content: el.getAttribute("data-content"),
+                    image: el.getAttribute("data-image"),
+                    imageCaption: el.getAttribute("data-image-caption")
+                };
 
-                    // Si el archivo es una plantilla, reemplazamos los placeholders
-                    if (file === "article-template.html") {
-                        let articleData = {
-                            title: z[i].getAttribute("data-title"),
-                            subtitle: z[i].getAttribute("data-subtitle"),
-                            date: z[i].getAttribute("data-date"),
-                            displayDate: z[i].getAttribute("data-display-date"),
-                            content: z[i].getAttribute("data-content"),
-                            image: z[i].getAttribute("data-image"),
-                            imageCaption: z[i].getAttribute("data-image-caption")
-                        };
-
-                        content = content.replace(/{{title}}/g, articleData.title)
-                            .replace(/{{subtitle}}/g, articleData.subtitle)
-                            .replace(/{{date}}/g, articleData.date)
-                            .replace(/{{displayDate}}/g, articleData.displayDate)
-                            .replace(/{{content}}/g, articleData.content)
-                            .replace(/{{image}}/g, articleData.image || '')
-                            .replace(/{{imageCaption}}/g, articleData.imageCaption || '');
-                    }
-
-
-                    a.removeAttribute("xlu-include-file");
-                    //a.innerHTML = await response.text();
-                    a.innerHTML = content;
-                    z[i].parentNode.replaceChild(a, z[i]);
-                    xLuIncludeFile();
-                }
-            } catch (error) {
-                console.error("Error fetching file:", error);
+                content = content.replace(/{{title}}/g, articleData.title)
+                    .replace(/{{subtitle}}/g, articleData.subtitle)
+                    .replace(/{{date}}/g, articleData.date)
+                    .replace(/{{displayDate}}/g, articleData.displayDate)
+                    .replace(/{{content}}/g, articleData.content)
+                    .replace(/{{image}}/g, articleData.image || '')
+                    .replace(/{{imageCaption}}/g, articleData.imageCaption || '');
             }
 
-            return;
+            clonedElement.removeAttribute("xlu-include-file");
+            clonedElement.innerHTML = content;
+            el.replaceWith(clonedElement);
+        } catch (error) {
+            console.error("Error fetching file:", error);
         }
-    }
-}
+    });
 
+    // Esperamos que todas las inclusiones se completen
+    await Promise.all(fetchPromises);
+}

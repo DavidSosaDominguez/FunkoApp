@@ -9,20 +9,20 @@
 <body>
 <form class="filter-box">
     <fieldset>
-        <legend>Size</legend>
-        <label><input type="checkbox" name="size" value="mega" checked> Mega</label>
-        <label><input type="checkbox" name="size" value="jumbo" checked> Jumbo</label>
-        <label><input type="checkbox" name="size" value="super" checked> Super</label>
-        <label><input type="checkbox" name="size" value="regular" checked> Regular</label>
+        <legend>Collection</legend>
+        <label><input type="checkbox" name="size" value="Invincible" checked> Invincible</label>
+        <label><input type="checkbox" name="size" value="LOL" checked> LOL</label>
+        <label><input type="checkbox" name="size" value="3rd" checked> 3rd</label>
+        <label><input type="checkbox" name="size" value="4th" checked> 4th</label>
     </fieldset>
     <fieldset class="price-range">
         <legend>Price Range</legend>
-        <div class="range-container">
+        <section class="range-container">
             <label for="price" class="min-price">0 €</label>
             <input type="range" id="price" name="price" min="0" max="100" value="10" oninput="updatePriceValue(this.value)">
             <label for="price" class="max-price">100 €</label>
-        </div>
-        <span id="price-value">10 €</span>
+        </section>
+        <span id="price-value">100 €</span>
     </fieldset>
 </form>
 
