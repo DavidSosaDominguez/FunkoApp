@@ -19,10 +19,10 @@
 <main>
   <article id="register_box">
     <h1 id="register_text">Sign In</h1>
-    <form id="input_form">
-      <input type="text" placeholder="Email*" name="email" />
-      <input type="password" placeholder="Password*" name="password" />
-      <a href="log_main_page.html" id="submit_button">Submit</a>
+    <form class="input_form" id="login_form">
+      <input id="email" type="email" placeholder="Email*" name="email" required/>
+      <input id="password" type="password" placeholder="Password*" name="password" required minlength="8"/>
+      <button type="submit" id="submit_button">Submit</button>
     </form>
   </article>
   <section id="register_link">
@@ -33,5 +33,6 @@
 </main>
 <footer xlu-include-file="../templates/footer_template.html"></footer>
 <script>xLuIncludeFile()</script>
+<script src="../../scripts/user_login.js"></script>
 </body>
 </html>
