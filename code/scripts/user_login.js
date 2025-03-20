@@ -18,6 +18,8 @@ function loginUser(event) {
     }
 
     sessionStorage.setItem('user', JSON.stringify(match));
+
+    window.location.href = "index.html";
 }
 
 logInForm.addEventListener('submit', loginUser);

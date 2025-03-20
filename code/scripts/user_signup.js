@@ -21,7 +21,11 @@ function registerUser(event) {
         return;
     }
     users.push(newUser);
-    localStorage.setItem('users', JSON.stringify(users));
+    const stringUser = JSON.stringify(newUser);
+    localStorage.setItem('users', stringUser);
+    sessionStorage.setItem('user', stringUser);
+
+    window.location.href = "index.html";    
 }
 
 
