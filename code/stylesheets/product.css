@@ -44,8 +44,6 @@ main {
 .product_sections {
     width: 50%;
     border: 2px solid #000;
-    container-type: inline-size;
-
 }
 
 #product_image_container {
@@ -89,29 +87,6 @@ main {
     margin-bottom: 40px;
     text-decoration: none;
     text-align: center;
-}
-
-@container (width < 340px) {
-    #product_description {
-        display: none;
-    }
-    #product_title {
-        font-size: 35px;
-    }
-    #buy_button {
-        width: 170px;
-        height: 40px;
-    }
-}
-
-@container (width < 250px) {
-    #product_title {
-        font-size: 30px;
-    }
-    #buy_button {
-        width: 150px;
-        font-size: 1.15rem !important;
-    }
 }
 
 #product_def_container {
@@ -179,3 +154,5 @@ nav {
     gap:5px;
     padding: 10px;
 }
+
+
