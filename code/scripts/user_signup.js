@@ -15,20 +15,32 @@ function registerUser(event) {
         document.querySelector('#email').value,
         document.querySelector('#password').value
     );
-    const users = JSON.parse(localStorage.getItem('users')) || [];
-    if(users.some(user => user.name === newUser.name)) {
-        alert("User already exists");
-        return;
-    }
-    users.push(newUser);
+
     const stringUser = JSON.stringify(newUser);
-    localStorage.setItem('users', stringUser);
+
+    const users = localStorage.getItem('users');
+    if(!users) {
+        localStorage.setItem('users', '[' + stringUser + ']');
+        window.open('../pages/new_index.html', '_self');
+        return;
+    }else {
+        const userList = JSON.parse(users);
+        //Check that user isn't already registered
+        if(userList.some(user => user.email === newUser.email)) {
+            alert('A user with given email already exists');
+            return;
+        }
+        userList.push(newUser);
+        localStorage.setItem('users', JSON.stringify(userList));
+    }
+
     sessionStorage.setItem('user', stringUser);
 
-    window.location.href = "index.html";    
+    window.open('../pages/new_index.html', '_self');
 }
 
 
-
-signUpForm.addEventListener('submit', registerUser);
-
+document.addEventListener(
+    'DOMContentLoaded',
+    () => signUpForm.addEventListener('submit', registerUser)
+);

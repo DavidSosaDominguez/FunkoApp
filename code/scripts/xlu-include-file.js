@@ -11,29 +11,26 @@ async function xLuIncludeFile() {
             if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
             let content = await response.text();
 
-            if (file === "article-template.html") {
-                let articleData = {
-                    title: el.getAttribute("data-title"),
-                    subtitle: el.getAttribute("data-subtitle"),
-                    date: el.getAttribute("data-date"),
-                    displayDate: el.getAttribute("data-display-date"),
-                    content: el.getAttribute("data-content"),
-                    image: el.getAttribute("data-image"),
-                    imageCaption: el.getAttribute("data-image-caption")
-                };
-
-                content = content.replace(/{{title}}/g, articleData.title)
-                    .replace(/{{subtitle}}/g, articleData.subtitle)
-                    .replace(/{{date}}/g, articleData.date)
-                    .replace(/{{displayDate}}/g, articleData.displayDate)
-                    .replace(/{{content}}/g, articleData.content)
-                    .replace(/{{image}}/g, articleData.image || '')
-                    .replace(/{{imageCaption}}/g, articleData.imageCaption || '');
-            }
-
             clonedElement.removeAttribute("xlu-include-file");
             clonedElement.innerHTML = content;
             el.replaceWith(clonedElement);
+
+            if(clonedElement.tagName === 'HEADER') {
+                const signupTag = document.querySelector('#sign_up');
+                const loginTag = document.querySelector('#sign_in');
+                const logoutTag = document.querySelector('#log-out-button');
+                const cartTag = document.querySelector('#cart-button');
+
+                const user = sessionStorage.getItem('user');
+
+                if(!user) {
+                    logoutTag.style.display = 'none';
+                    cartTag.style.display = 'none';
+                }else {
+                    signupTag.style.display = 'none';
+                    loginTag.style.display = 'none';
+                }
+            }
         } catch (error) {
             console.error("Error fetching file:", error);
         }
