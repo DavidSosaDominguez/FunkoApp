@@ -129,9 +129,17 @@ aside {
     border: 2px solid #000;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 @container (width < 355px) {
     #product_description {
         display: none;
+        margin-bottom: 0;
     }
     #product_title {
         font-size: 35px;
@@ -152,6 +160,16 @@ aside {
     }
 }
 
+@media (max-width: 570px) {
+    #product_display {
+        height: 250px;
+    }
+    nav {
+        justify-content: center;
+    }
+
+}
+
 #category_text {
     color: gray;
     font-weight: lighter;
@@ -167,11 +185,6 @@ aside {
 
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-}
+
 
 
