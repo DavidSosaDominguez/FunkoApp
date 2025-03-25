@@ -36,7 +36,7 @@ function registerUser(event) {
 
     sessionStorage.setItem('user', stringUser);
 
-    window.open('../pages/new_index.html', '_self');
+    window.open('../pages/index.html', '_self');
 }
 
 
