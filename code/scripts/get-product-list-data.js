@@ -16,7 +16,7 @@ fetch('../../json_files/funkos_data.json')
                         <h2 class="product_name">${product.name}</h2>
                         <h3 class="product_description">${product.series}</h3>
                         <!-- Añadido el id del producto en el enlace -->
-                        <a href="no_log_product_page.html?id=${product.id}" class="product_button">View</a>
+                        <a href="product_page.html?id=${product.id}" class="product_button">View</a>
                     </section>
                 </section>
                 <p>${product.price}€</p>

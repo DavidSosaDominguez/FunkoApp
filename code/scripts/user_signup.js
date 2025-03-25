@@ -21,7 +21,7 @@ function registerUser(event) {
     const users = localStorage.getItem('users');
     if(!users) {
         localStorage.setItem('users', '[' + stringUser + ']');
-        window.open('../pages/new_index.html', '_self');
+        window.open('../pages/index.html', '_self');
         return;
     }else {
         const userList = JSON.parse(users);
@@ -36,7 +36,7 @@ function registerUser(event) {
 
     sessionStorage.setItem('user', stringUser);
 
-    window.open('../pages/new_index.html', '_self');
+    window.open('../pages/index.html', '_self');
 }
 
 
