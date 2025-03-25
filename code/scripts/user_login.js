@@ -22,7 +22,7 @@ function loginUser(event) {
         return;
     }
     sessionStorage.setItem('user', JSON.stringify(match));
-    window.open('../pages/new_index.html', '_self');
+    window.open('../pages/index.html', '_self');
 }
 
 document.addEventListener(
