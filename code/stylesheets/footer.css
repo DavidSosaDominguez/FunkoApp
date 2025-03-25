@@ -6,42 +6,72 @@
 footer {
     background-color: #85C6FF;
     color: white;
-    position: absolute;
-    bottom: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 1.5vw 3vw;
+    padding: 20px 40px;
     align-items: center;
-    height: 15vh;
-    margin-top: 2vh;
-    margin-bottom: 0;
-    gap: 3vw;
+    height: 120px;
+    margin-top: 20px;
+    gap: 30px;
 }
 
 .info h2 {
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 24px;
     font-weight: bold;
     font-family: "Sigmar One", Serif, sans-serif;
 }
 
 .info p {
     text-align: center;
-    font-size: 0.75vw;
+    font-size: 14px;
     font-family: "Sigmar One", Serif, sans-serif;
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(2, 3vw);
-    grid-template-rows: repeat(2, 3vw);
-    gap: 0.5vw;
+    grid-template-columns: repeat(2, 40px);
+    grid-template-rows: repeat(2, 40px);
+    gap: 5px;
 }
 
 .gallery img {
-    width: 3vw;
-    height: 3vw;
+    width: 40px;
+    height: 40px;
     object-fit: cover;
-    border-radius: 0.3vw;
+    border-radius: 5px;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .gallery {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .gallery img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .info h2 {
+        font-size: 20px;
+    }
+
+    .info p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 355px) {
+
 }

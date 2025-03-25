@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+main {
+    flex: 1;
+}
+
 #product_list_container {
     width: 80%;
     margin:40px auto;

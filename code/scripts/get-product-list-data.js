@@ -1,5 +1,5 @@
 // Cargar datos desde el JSON y generar los productos dinámicamente
-fetch('../../json_files/example.json')
+fetch('../../json_files/funkos_data.json')
     .then(response => {
         console.log(response);  // Verifica si la respuesta está correcta
         return response.json();
