@@ -9,6 +9,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    container-type: inline-size;
 }
 
 .logo-title-list {
@@ -123,4 +124,54 @@ header {
 #sign_in {
     background-color: #FFFFFF;
     color: #FF3B7D;
+}
+
+@media (max-width : 1350px) {
+    .search-container input {
+        width: 15vw;
+    }
+}
+
+@media (max-width : 1500px) and (min-width : 1350px) {
+    .search-icon, #search-button {
+        display: none;
+    }
+}
+
+@container (width < 800px) {
+    .logo-title-list {
+        gap: 0;
+    }
+    .logo, .search-icon, #search-button {
+        display: none;
+
+    }
+    .search-container, .search-container input, .search-container button {
+        width: 15vw;
+        margin-left: 0;
+    }
+    .signed-in-button, .signed-out-button {
+        width: 60px;
+        font-size: 0.8rem;
+    }
+    #title {
+        font-size: 3rem;
+        margin: 0;
+    }
+    #filter-button {
+        width: 30px;
+    }
+    .button-list {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width : 560px) {
+    #title {
+        max-width: 170px;
+    }
+    .search-container, .search-container input, .search-container button {
+        width: 100px;
+        margin-left: 0;
+    }
 }
