@@ -138,19 +138,32 @@ header {
     }
 }
 
+@media (max-width : 770px) {
+    header {
+        flex-direction: column;
+    }
+    .button-list {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .search-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+    }
+    .
+}
+
 @container (width < 800px) {
     .logo-title-list {
         gap: 0;
-    }
-    .logo, .search-icon, #search-button {
-        display: none;
-
     }
     .search-container, .search-container input, .search-container button {
         width: 15vw;
         margin-left: 0;
     }
-    .signed-in-button, .signed-out-button {
+    .signed-out-button {
         width: 60px;
         font-size: 0.8rem;
     }
@@ -166,7 +179,7 @@ header {
     }
 }
 
-@media (max-width : 560px) {
+@media (width < 560px) {
     #title {
         max-width: 170px;
     }

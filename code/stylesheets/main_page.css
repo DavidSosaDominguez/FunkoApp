@@ -62,13 +62,13 @@ main {
 }
 
 .product_name {
-    font-size: 1.5rem;
+    font-size: 5vw;
     text-align: left;
     color: #191970;
 }
 
 .product_description {
-    font-size: 0.75rem;
+    font-size: 2vw;
     text-align: left;
     color: grey;
 }
@@ -83,13 +83,24 @@ main {
     .product_info {
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         gap: 10px;
         padding: 20px;
         width: 100%;
         text-align: center;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        margin-right: 10px;
+    }
+    .product_image {
+        width: 20vw;
+    }
+    .product_holder {
+        flex-direction: column;
+    }
+    .product_holder p {
+        clear: both;
+    }
+}
+
+@media (max-width: 300px) {
+    .product_name, .product_description {
+        text-align: center;
     }
 }

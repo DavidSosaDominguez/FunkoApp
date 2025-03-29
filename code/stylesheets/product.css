@@ -39,6 +39,7 @@ main {
     width: 70%;
     height: 400px;
     margin: auto;
+    container-type: inline-size;
 }
 
 .product_sections {
@@ -133,7 +134,6 @@ aside {
 
 }
 
-
 .related_images {
     width: 150px;
     margin: auto;
@@ -155,4 +155,46 @@ nav {
     padding: 10px;
 }
 
+@container (width < 355px) {
+    #product_description {
+        display: none;
+        margin-bottom: 0;
+    }
+    #product_title {
+        font-size: 35px;
+    }
+    #buy_button {
+        width: 170px;
+        height: 40px;
+    }
+}
 
+@container (width < 250px) {
+    #product_title {
+        font-size: 8vw;
+    }
+    #buy_button {
+        width: 30vw;
+        font-size: 3.6vw;
+    }
+    #category_text {
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 570px) {
+    nav {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 300px) {
+    #related_products_text {
+        font-size: 6vw;
+    }
+    .related_images {
+        height: 47vw;
+        width: 47vw;
+    }
+}
