@@ -1,4 +1,4 @@
-let allProducts = []; // Variable global para almacenar los productos
+let allProducts = [];
 
 fetch('../../json_files/funkos_data.json')
     .then(response => response.json())
@@ -19,8 +19,6 @@ fetch('../../json_files/funkos_data.json')
         }
     })
     .catch(error => console.error('Error loading products:', error));
-
-// Resto de tus funciones (displayProducts y searchProducts) igual que antes(error => console.error('Error loading products:', error));
 
 function displayProducts(products) {
     const container = document.getElementById('product_list_container');
