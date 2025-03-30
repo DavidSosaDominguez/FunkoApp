@@ -4,12 +4,13 @@
     </figure>
     <h1 class="sigmar-one-regular" id="title"><a href="../pages/index.html">Funko Store</a></h1>
 </section>
-<form class="search-container">
+
+<form class="search-container" onsubmit="searchProducts(event)">
     <button type="button" id="filter-button">
         <img src="../../resource-images/filter.png" alt="Filtrar" class="filter-icon">
     </button>
     <label>
-        <input type="text" id="searchInput" placeholder="Buscar figuras..." onkeyup="searchProducts()">
+        <input type="text" id="searchInput" placeholder="Buscar figuras...">
     </label>
     <button type="submit" id="search-button">
         <img src="../../resource-images/search.png" alt="buscar" class="search-icon">

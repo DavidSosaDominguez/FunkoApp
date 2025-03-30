@@ -3,14 +3,14 @@ let allProducts = []; // Variable global para almacenar los productos
 fetch('../../json_files/funkos_data.json')
     .then(response => response.json())
     .then(products => {
-        allProducts = products; // Guarda los productos en la variable global
-        displayProducts(allProducts); // Muestra todos los productos al inicio
+        allProducts = products;
+        displayProducts(allProducts);
     })
     .catch(error => console.error('Error loading products:', error));
 
 function displayProducts(products) {
     const container = document.getElementById('product_list_container');
-    container.innerHTML = ''; // Limpia el contenedor antes de mostrar los productos
+    container.innerHTML = ''; // Limpia el contenedor
     products.forEach(product => {
         const productSection = document.createElement('section');
         productSection.classList.add('product_holder');
@@ -29,7 +29,10 @@ function displayProducts(products) {
     });
 }
 
-function searchProducts() {
+// Modifica la función en get-product-list-data.js
+function searchProducts(event) {
+    event.preventDefault(); // Evita que el formulario se envíe
+
     const query = document.getElementById('searchInput').value.toLowerCase();
     const filteredProducts = allProducts.filter(product =>
         product.name.toLowerCase().includes(query) ||
