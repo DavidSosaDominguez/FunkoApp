@@ -3,10 +3,24 @@ let allProducts = []; // Variable global para almacenar los productos
 fetch('../../json_files/funkos_data.json')
     .then(response => response.json())
     .then(products => {
-        allProducts = products;
-        displayProducts(allProducts);
+        allProducts = products; // 1. Guarda todos los productos
+
+        // 2. Verifica si hay una búsqueda previa guardada
+        const savedSearch = localStorage.getItem('lastSearch');
+        if (savedSearch) {
+            document.getElementById('searchInput').value = savedSearch; // Rellena el input
+            const filteredProducts = allProducts.filter(product =>
+                product.name.toLowerCase().includes(savedSearch) ||
+                product.series.toLowerCase().includes(savedSearch)
+            );
+            displayProducts(filteredProducts); // Muestra resultados filtrados
+        } else {
+            displayProducts(allProducts); // Muestra todos los productos
+        }
     })
     .catch(error => console.error('Error loading products:', error));
+
+// Resto de tus funciones (displayProducts y searchProducts) igual que antes(error => console.error('Error loading products:', error));
 
 function displayProducts(products) {
     const container = document.getElementById('product_list_container');
@@ -29,14 +43,22 @@ function displayProducts(products) {
     });
 }
 
-// Modifica la función en get-product-list-data.js
 function searchProducts(event) {
-    event.preventDefault(); // Evita que el formulario se envíe
-
+    event.preventDefault();
     const query = document.getElementById('searchInput').value.toLowerCase();
+
+    // Guarda la búsqueda en localStorage
+    localStorage.setItem('lastSearch', query);
+
     const filteredProducts = allProducts.filter(product =>
         product.name.toLowerCase().includes(query) ||
         product.series.toLowerCase().includes(query)
     );
-    displayProducts(filteredProducts);
+
+    // Redirige a index.html si no estamos allí
+    if (!window.location.pathname.includes('index.html')) {
+        window.location.href = '../pages/index.html';
+    } else {
+        displayProducts(filteredProducts);
+    }
 }
