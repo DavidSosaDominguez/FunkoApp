@@ -55,7 +55,7 @@ Página de inicio web: index.html (sin sesión iniciada)--> search page content 
 - log_product_main_template.html --> various_products.png --> se carga en: log_product_page.html ???
 - no_log_product_main_template.html --> various_products.png --> se carga en: no_log_product_page.html ???
 - aside_template.html --> related_products_section.png --> se carga en: product_page.html
-
+- filters_box_template.html --> filters_box.png --> se carga en cualquier página al apretar el botón de filtrado de la cabecera, en forma de pop up
 ## Enlaces de Figma y Trello
 Enlace a Figma: https://www.figma.com/proto/Y5RfUjnKBVKyW7YP7aJ0Od/FunkoStore?node-id=0-1&t=oSm50ukrvczhm2Jw-1
 Enlace a Trello: https://trello.com/invite/b/67a251c975e168960811fcb6/ATTI2ffbfd1ea74fb8f90c93274d136c8c3664EC95DE/funkoweb
