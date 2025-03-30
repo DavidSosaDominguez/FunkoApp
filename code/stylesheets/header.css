@@ -155,7 +155,7 @@ header {
     .
 }
 
-@container (width < 800px) {
+@container (width < 860px) {
     .logo-title-list {
         gap: 0;
     }
