@@ -21,6 +21,7 @@ function registerUser(event) {
     const users = localStorage.getItem('users');
     if(!users) {
         localStorage.setItem('users', '[' + stringUser + ']');
+        sessionStorage.setItem('user', stringUser)
         window.open('../pages/index.html', '_self');
         return;
     }else {

@@ -1,3 +1,9 @@
+function logoutUser(event) {
+    event.preventDefault();
+    sessionStorage.removeItem('user');
+    location.reload();
+}
+
 async function xLuIncludeFile() {
     let elements = document.querySelectorAll("[xlu-include-file]");
 
@@ -30,6 +36,8 @@ async function xLuIncludeFile() {
                     signupTag.style.display = 'none';
                     loginTag.style.display = 'none';
                 }
+
+                logoutTag.addEventListener('click', logoutUser)
             }
         } catch (error) {
             console.error("Error fetching file:", error);
