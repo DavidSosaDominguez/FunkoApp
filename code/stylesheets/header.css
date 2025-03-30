@@ -12,6 +12,10 @@ header {
     container-type: inline-size;
 }
 
+#popup-container {
+    align-self: center;
+}
+
 .logo-title-list {
     display: flex;
     align-items: center;
@@ -170,9 +174,6 @@ header {
     #title {
         font-size: 3rem;
         margin: 0;
-    }
-    #filter-button {
-        width: 30px;
     }
     .button-list {
         margin-right: 10px;
