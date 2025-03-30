@@ -31,6 +31,7 @@ function loadProductInfo(funko) {
     document.getElementById('product_image').src = funko.image;
     document.getElementById('product_title').textContent = funko.name;
     document.getElementById('category_text').textContent = funko.series || 'Categoría desconocida';
+    document.getElementById("product_price").textContent = funko.price + " €";
     document.getElementById('product_description').textContent = funko.description;
 }
 
